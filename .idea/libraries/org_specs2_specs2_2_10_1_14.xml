@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="org.specs2:specs2_2.10:1.14" type="repository">
+    <properties maven-id="org.specs2:specs2_2.10:1.14" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/specs2_2.10-1.14.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/specs2-scalaz-core_2.10-7.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/scala-library-2.10.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/specs2-scalaz-concurrent_2.10-7.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/scalaz-effect_2.10-7.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/scalaz-core_2.10-7.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
