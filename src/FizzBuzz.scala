@@ -11,8 +11,12 @@ class FizzBuzz {
   val printer = new PrintStream(System.out)
 
   def fizzBuzz {
-    for (x <- 1 to 100)
-      printer.println(x)
+    for (x <- 1 to 100)  {
+      if (x % 3 == 0)
+        printer.println("Fizz")
+      else
+        printer.println(x)
+    }
   }
 
 }

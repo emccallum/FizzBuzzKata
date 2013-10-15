@@ -12,6 +12,7 @@ import org.specs2.mutable.Specification
 class FizzBuzzTest extends Specification with Mockito {
   isolated
   val mockPrinter = mock[PrintStream]
+
   val fizzBuzzPrinter = new FizzBuzz {
     override val printer = mockPrinter
   }
@@ -22,6 +23,14 @@ class FizzBuzzTest extends Specification with Mockito {
       there was one(mockPrinter).println(100) after mockPrinter.println(99)
     }
   }
+
+  "The FizzBuzz method" should {
+    "print Fizz for numbers divisible by 3" in {
+      fizzBuzzPrinter.fizzBuzz
+      there were 33.times(mockPrinter).println("Fizz")
+    }
+  }
+
 
 
 
