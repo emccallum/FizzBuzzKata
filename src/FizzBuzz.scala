@@ -12,10 +12,11 @@ class FizzBuzz {
 
   def fizzBuzz {
     for (x <- 1 to 100)  {
-      if (x % 3 == 0)
-        printer.println("Fizz")
-      else
-        printer.println(x)
+      (x%3, x%5) match {
+        case(0,_) => printer.println("Fizz")
+        case(_,0) => printer.println("Buzz")
+        case(_,_) => printer.println(x)
+      }
     }
   }
 

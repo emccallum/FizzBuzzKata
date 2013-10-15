@@ -20,7 +20,7 @@ class FizzBuzzTest extends Specification with Mockito {
     "print all numbers 1 to 100" in {
       fizzBuzzPrinter.fizzBuzz
       there was one(mockPrinter).println(1) before mockPrinter.println(2)
-      there was one(mockPrinter).println(100) after mockPrinter.println(99)
+      there was one(mockPrinter).println(98) after mockPrinter.println(97)
     }
   }
 
@@ -28,10 +28,15 @@ class FizzBuzzTest extends Specification with Mockito {
     "print Fizz for numbers divisible by 3" in {
       fizzBuzzPrinter.fizzBuzz
       there were 33.times(mockPrinter).println("Fizz")
+      there was no(mockPrinter).println(3)
     }
   }
 
-
-
-
+  "The FizzBuzz method" should {
+    "print Buzz for numbers divisible by 5, not divisible by 3" in {
+      fizzBuzzPrinter.fizzBuzz
+      there were 14.times(mockPrinter).println("Buzz")
+      there was no(mockPrinter).println(5)
+    }
+  }
 }
