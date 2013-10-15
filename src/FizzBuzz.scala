@@ -1,3 +1,5 @@
+import java.io.PrintStream
+
 /**
  * Created with IntelliJ IDEA.
  * User: Thoughtworks
@@ -6,5 +8,11 @@
  * To change this template use File | Settings | File Templates.
  */
 class FizzBuzz {
+  val printer = new PrintStream(System.out)
+
+  def fizzBuzz {
+    for (x <- 1 to 100)
+      printer.println(x)
+  }
 
 }
